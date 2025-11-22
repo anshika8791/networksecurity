@@ -42,6 +42,7 @@ class NetworkDataExtract():
             self.mongo_client=pymongo.MongoClient(MONGO_DB_URL)
             self.database= self.mongo_client[self.database]
             self.collection= self.database[self.collection]
+            self.collection.insert_many(self.records)
             return(len(self.records))
         except Exception as e:
             raise NetworkSecurityException(e,sys)
