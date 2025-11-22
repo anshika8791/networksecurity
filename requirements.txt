@@ -3,5 +3,6 @@ pandas
 numpy
 pymongo
 certifi 
+pymongo[srv]==3.12
 
 ##-e .   ## used to deploy project on cloud platform
